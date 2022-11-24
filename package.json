@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/khula": "^4.5.10",
+    "@fontsource/markazi-text": "^4.5.11",
     "bootstrap": "^5.2.3",
     "vue": "^3.2.41"
   },
