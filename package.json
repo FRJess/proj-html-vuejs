@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource/khula": "^4.5.10",
     "@fontsource/markazi-text": "^4.5.11",
+    "@fontsource/open-sans": "^4.5.13",
     "bootstrap": "^5.2.3",
     "vue": "^3.2.41"
   },
