@@ -8,6 +8,7 @@ export default [
     duration: '6 hours',
     image: 'photo-1496307042754-b4aa456c4a2d-370x200.jpeg',
     special: true,
+    price: '$59',
   },
   {
     id: 1001,
@@ -18,6 +19,7 @@ export default [
     duration: '6 hours',
     image: '12345-1-370x200.png',
     special: true,
+    price: '$79',
   },
   {
     id: 1002,
@@ -28,6 +30,7 @@ export default [
     duration: '6 hours',
     image: 'photo-1491897554428-130a60dd4757-370x200.jpeg',
     special: true,
+    price: '$59',
   },
   {
     id: 1003,
@@ -38,6 +41,7 @@ export default [
     duration: '6 hours',
     image: 'photo-1416339134316-0e91dc9ded92-370x200.jpeg',
     special: false,
+    price: '$39',
   },
   {
     id: 1004,
@@ -48,6 +52,7 @@ export default [
     duration: '6 hours',
     image: 'cathryn-lavery-67852-unsplash-370x200.jpg',
     special: false,
+    price: '$49',
   },
   {
     id: 1005,
@@ -58,6 +63,7 @@ export default [
     duration: '6 hours',
     image: 'photo-1475452779376-caebfb988090-370x200.jpeg',
     special: false,
+    price: '$39',
   },
 
 ]

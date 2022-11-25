@@ -1,31 +1,20 @@
 <script>
-import AppCardCourses from './AppCardCourses.vue';
-
-import courses from '../data/courses';
+import NewCourses from './NewCourses.vue'
 
 export default {
   name:'AppMain',
 
   components:{
-    AppCardCourses
-  },
+    NewCourses
+  
+  }
 
-  data(){
-    return{
-      courses,
-
-    }
-  },
 
 }
 </script>
 
 <template>
-
-  <AppCardCourses
-  v-for="(card, index) in courses"
-  :card="card"
-  :key="index"/>
+  <NewCourses/>
 
   
 </template>

@@ -41,7 +41,6 @@
   @if $type =='column' {
     flex-direction: column;
   }
-
 }
 
 @mixin imagePosition() {

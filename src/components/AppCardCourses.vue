@@ -10,36 +10,36 @@ export default {
   },
   data(){
     return {
-      // courses,
       getPathImage,
     }
   },
 }
 </script>
 
-<template class="cards-courses">
+<template>
 
-  <h3>New Courses</h3>
+
 
 
   <!-- card con js -->
 
-  <div class="card">
-    <img :src="getPathImage(card.image)" alt="card.image">
-    <h4>{{card.name}}</h4>
-    <p>type</p>
-
-    <nav>
-      <ul>
-        <li>{{card.level}}</li>
-        <li>{{card.material}}</li>
-        <li>{{card.duration}}</li>
-      </ul>
-    </nav>
-  </div>
-
-  <button>load more</button>
-
+    <div class="jt-card card col-3">
+      <img 
+      :src="getPathImage(card.image)" 
+      :alt="card.image"
+      class="card-img-top">
+      <div class="card-body">
+        <h4 class="card-title">{{card.name}}</h4>
+        <p class="card-text">{{card.type}}</p>
+        <div class="card-footer jt-card-footer">
+          <ul>
+            <li>{{card.level}}</li>
+            <li>{{card.material}}</li>
+            <li>{{card.duration}}</li>
+           </ul>
+        </div>
+    </div>
+</div>
 
   
 </template>
@@ -50,8 +50,25 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
 
-.cards-courses{
-  max-width: 60%;
-}
+.jt-card{
+    text-align: center;
+    margin-bottom: 50px;
+    cursor: pointer;
+  img{
+    max-width: 100%;
+    transition: all .2s;
+    margin-bottom: 20px;
+    &:hover{
+      filter: brightness(0.5);
+    }
+  }
+  .jt-card-footer{
+    background-color: white;
+    ul{
+      @include listStyle
+    }
+  }
+  }
+
 
 </style>
