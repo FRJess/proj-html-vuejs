@@ -6,6 +6,7 @@ export default {
 </script>
 
 <template>
+
   
 </template>
 
@@ -15,5 +16,6 @@ export default {
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
+
 
 </style>

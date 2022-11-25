@@ -6,13 +6,13 @@ export default [
     new: false,
   },
   {
-    text: 'Course Fortmats',
+    text: 'Course Formats',
     href: '#',
     current: false,
     new: false,
   },
   {
-    text: 'Add Courses',
+    text: 'Add Course',
     href: '#',
     current: false,
     new: true,

@@ -14,32 +14,38 @@ export default {
 </script>
 
 <template>
-  <header  class="container">
+  <header  class="jt-container">
+    
+      <!-- logo -->
+      <div class="logo col-auto">
+        <img src="../assets/img/MasterStudy-1.svg" alt="logo Master Study">
+      </div>
 
-    <!-- logo -->
-    <div class="logo">
-      <img src="../assets/img/MasterStudy-1.svg" alt="logo Master Study">
-    </div>
-  
-    <!-- nav con js file link index -->
-    <nav class="navbar d-flex">
+    <div class="navigation col-auto">
       <ul>
-        <li
-        v-for="(link, index) in menu"
-        :key="index"
-        ><a :class="{'active': link.current}" :href="link.href">{{link.text}}</a></li>
-      </ul>
-    </nav>
-  
-    <!-- link social -->
-    <nav>
-      <!-- controllare se img o FA -->
-    </nav>
+          <li
+          v-for="(link, index) in menu"
+          :key="index"
+          ><a class="position-relative" :class="{'active': link.current}" :href="link.href">{{link.text}}            
+            <span 
+            v-if="link.new === true"
+            class="jt-badge badge">
+            New
+          </span></a>
+
+          </li>
+        </ul>
+    </div>
+
+    <div class="social-menu col-auto">
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+
 
   </header>
-
-
-
   
 </template>
 
@@ -50,28 +56,62 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
 
-header{
-  // font-family: $main-font;
-  padding: 50px;
+.jt-container{
+  height:250px;
+  width: 70%;
+  margin: 0 auto;
+  font-family: $list-font;
+  // font-weight: 500;
+  font-size: 20px;
   @include centerFlex ('vertical');
   @include positionFlex ('between');
 
   .logo{
-    @include centerFlex('vertical');
     img{
-      height: 30px;
+      height: 50px;
       cursor: pointer;
     }
   }
-  nav{
+  .navigation{
     display: flex;
     ul{
       @include listStyle();
       @include centerFlex('both');
       li{
-        @include positionFlex ('between');
-        @include centerFlex('vertical');
+        text-decoration: none;
+        margin: 0 10px 0 10px;
+        a{
+          @include links();
+          &.active{
+            margin-bottom: 10px;
+            text-decoration: underline;
+            text-decoration-color: $primary-color;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 20px;
+            // color: $primary-color;
+          // box-shadow: inset 0 -2px 0 $primary-color;
+          }
+          .jt-badge{
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            position: absolute;
+            bottom: 100%;
+            right: -15%;
+            padding: 4px 6px;
+            border-radius: 3px;
+            background-color: #DC1244;
+            
+          }
+
+        }
       }
+    }
+  }
+  .social-menu{
+    a{
+      margin: 0 5px 0 5px;
+      @include links();
+
     }
   }
 }
