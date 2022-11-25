@@ -1,11 +1,19 @@
 <script>
+import AppCardCourses from './AppCardCourses.vue'
+
 export default {
-  name:'AppMain'
+  name:'AppMain',
+
+  components:{
+    AppCardCourses
+  }
 
 }
 </script>
 
 <template>
+
+  <AppCardCourses/>
 
   
 </template>
