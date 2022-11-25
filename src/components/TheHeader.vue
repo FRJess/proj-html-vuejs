@@ -60,7 +60,7 @@ export default {
   height:250px;
   width: 70%;
   margin: 0 auto;
-  font-family: $list-font;
+  font-family: $main-font;
   // font-weight: 500;
   font-size: 20px;
   @include centerFlex ('vertical');

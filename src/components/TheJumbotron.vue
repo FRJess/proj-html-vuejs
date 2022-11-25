@@ -166,10 +166,11 @@ export default {
   margin: 0 auto;
   @include positionFlex('between');
   .left{
+    font-family: $main-font;
     max-width: 40%;
     padding: 0 50px;
     h2{
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
     img{
       @include centerFlex('horizontal');

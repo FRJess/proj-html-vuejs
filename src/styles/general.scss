@@ -2,12 +2,12 @@
 @use './partials/mixins' as *;
 
 @import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/@fontsource/markazi-text';
-@import 'node_modules/@fontsource/roboto';
-@import 'node_modules/@fontsource/khula';
-@import 'node_modules/@fontsource/open-sans';
+@import 'node_modules/@fontsource/markazi-text/index.css';
+@import 'node_modules/@fontsource/roboto/index.css';
+@import 'node_modules/@fontsource/khula/index.css';
+@import 'node_modules/@fontsource/open-sans/index.css';
 
-@import 'node_modules/@forteawesome/fonteawesome-free/css/all.min.css';
+@import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
 body {
   font-family: $list-font;

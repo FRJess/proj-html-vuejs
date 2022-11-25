@@ -1,26 +1,39 @@
 <script>
-export default {
-  name:'AppCardCourses'
+import courses from '../data/courses';
 
+import { getPathImage } from '../data/functions';
+
+export default {
+  name:'AppCardCourses',
+  props:{
+    card: Object,
+  },
+  data(){
+    return {
+      // courses,
+      getPathImage,
+    }
+  },
 }
 </script>
 
-<template>
+<template class="cards-courses">
 
   <h3>New Courses</h3>
+
 
   <!-- card con js -->
 
   <div class="card">
-    <img src="" alt="">
-    <h4>course name</h4>
+    <img :src="getPathImage(card.image)" alt="card.image">
+    <h4>{{card.name}}</h4>
     <p>type</p>
 
     <nav>
       <ul>
-        <li>level</li>
-        <li>material</li>
-        <li>time</li>
+        <li>{{card.level}}</li>
+        <li>{{card.material}}</li>
+        <li>{{card.duration}}</li>
       </ul>
     </nav>
   </div>
@@ -33,8 +46,12 @@ export default {
 
 
 <style lang="scss">
-@use './styles/general.scss';
-@use './styles/partials/variables.scss' as *;
-@use './styles/partials/mixins' as *;
+@use '../styles/partials/mixins' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/general.scss' as *;
+
+.cards-courses{
+  max-width: 60%;
+}
 
 </style>
