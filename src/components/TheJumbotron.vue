@@ -13,7 +13,7 @@ export default {
 <template>
 
   <!-- top con background e overflow -->
-  <section class="jumbotron">
+  <section class="jumbotron-top">
     <div class="jumbotron-top-backgound">
       <img src="../assets/img/slide-1.jpg" alt="">
       <div class="text-jumbotron">
@@ -62,14 +62,14 @@ export default {
   </section>
 
   <!-- bottom con testo + immagine firma -->
-  <section>
+  <section class="jumbotron-bottom">
     <div class="left">
-      <h2>John doe</h2>
-      <img src="" alt="">
+      <h2>Hey there, my name is John Doe. I'm the founder of the Brain Academy.</h2>
+      <img src="../assets/img/sign.jpg" alt="">
     </div>
 
     <div class="right">
-      <div class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi facere cumque exercitationem ipsum quae consectetur at quidem hic atque ut?</div>
+      <div class="p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit repellat modi soluta excepturi ex officiis, nihil ab magni culpa voluptatibus, vitae quisquam optio distinctio recusandae veritatis adipisci sunt minima qui eius error commodi eveniet deleniti dolor. Autem ducimus cupiditate id. Ab fuga at repudiandae sed odit eius autem consequatur vitae quod molestiae totam nam explicabo aut, iure unde voluptatum, inventore qui aliquam! Nostrum perferendis numquam similique voluptates velit distinctio dolorum incidunt expedita officia fuga, magni veritatis necessitatibus repellendus, ipsam rerum quae aperiam porro quasi? Dicta, delectus incidunt in natus vel voluptates illo necessitatibus numquam recusandae maiores consequuntur soluta ea molestiae.</div>
     </div>
   </section>
   
@@ -82,7 +82,7 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
 
-.jumbotron{
+.jumbotron-top{
   min-width: 100%;
   position: relative;
   font-family: $main-font;
@@ -160,6 +160,29 @@ export default {
     }
   }
 }
-
+.jumbotron-bottom{
+  padding-top: 200px;
+  max-width: 70%;
+  margin: 0 auto;
+  @include positionFlex('between');
+  .left{
+    max-width: 40%;
+    padding: 0 50px;
+    h2{
+      font-size: 1.5rem;
+    }
+    img{
+      @include centerFlex('horizontal');
+      max-width: 200px;
+      margin: 20px auto;
+    }
+  }
+  .right{
+    font-family: $text-font;
+    max-width: 60%;
+    font-size: 0.8rem;
+    color: #222222;
+  }
+}
 
 </style>
