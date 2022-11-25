@@ -24,20 +24,37 @@ export default {
     </div>
 
     <div class="jumbotron-top-offer">
-      <h2><span class="white-text">Limited Sale: </span>All courses with 55% off</h2>
-      <div class="mail-input input-group">
-        <input type="email" class="form-control rounded-pill mail" placeholder="Enter your E-mail"  aria-describedby="basic-addon2">
-        <button type="button" class="btn rounded-pill subscribe end-0">Subscribe</button>
+      <div class="left-part">
+        <h2><span class="white-text">Limited Sale: </span>All courses with 55% off</h2>
+        <div class="mail-input input-group">
+          <input type="email" class="form-control rounded-pill mail" placeholder="Enter your E-mail"  aria-describedby="basic-addon2">
+          <button type="button" class="btn rounded-pill subscribe end-0">Subscribe</button>
+        </div>
       </div>
-      <!-- cercare import -->
-      <countdown
-        tag="div"
-        :time="new Date('Dec 20, 2022').getTime()"
-        v-slot="{ days, hours, minutes, seconds }"
-      >
-        {{ days }} days {{ hours }} hours {{ minutes }} minutes
-        {{ seconds }} seconds.
-  </countdown>
+      
+      <div class="coutdown right-part">
+        <countdown
+          tag="div"
+          :time="new Date('Dec 20, 2022').getTime()"
+          v-slot="{ days, hours, minutes, seconds }"
+        >
+          <div class="numbers">
+            <div class="days col">
+              {{ days }} <span>Days</span>
+            </div>
+            <div class="hours col">
+              {{ hours }} <span>Hours</span>
+            </div>
+            <div class="minutes col">
+              {{ minutes }} <span>Minutes</span>
+            </div>
+            <div class="seconds col">
+              {{ seconds }} <span>Seconds</span>
+            </div>
+          </div>
+        </countdown>
+
+     </div>
         
 
     </div>
@@ -87,35 +104,59 @@ export default {
   }
   .jumbotron-top-offer{
     background-color: $primary-color;
-    width: 70%;
-    margin: 0 auto;
-    padding: 50px 20px;
+    width: 80%;
+    padding: 20px 50px;
     position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
     bottom: -15%;
-    left: 20%;
     border-radius: 5px;
-      // transform: translate(-30%, -70%);
-    .mail-input{
-      width: 50%;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      .mail{
-        font-size: 0.8rem;
-        padding: 10px;
+    @include positionFlex('between');
+    .left-part{
+      min-width: 70%;
+
+      h2{
+        font-size: 1.8rem;
+        // text-align: center;
       }
-      .subscribe{
-        background-color: #2D4649;
-        cursor: pointer;
-        vertical-align: middle;
-        position: absolute;
-        text-transform: uppercase;
+      .mail-input{
+        width: 75%;
+        margin: 20px 0;
+        padding: 0;
+        position: relative;
+        .mail{
+          font-size: 0.8rem;
+          padding: 10px;
+        }
+        .subscribe{
+          background-color: #2D4649;
+          cursor: pointer;
+          vertical-align: middle;
+          position: absolute;
+          text-transform: uppercase;
+          color: white;
+          font-size: 0.8rem;
+          padding: 10px;
+        }
+      }
+
+    }
+    .coutdown{
+      min-width: 30%;
+      padding-right: 20px;
+      .numbers{
+        @include positionFlex('between');
         color: white;
-        font-size: 0.8rem;
-        padding: 10px;
-
+        font-size: 3rem;
+        span{
+          font-size: 1rem;
+          color: black;
+        }
+        .col{
+          @include flexDirection('column');
+        }
       }
-
     }
   }
 }

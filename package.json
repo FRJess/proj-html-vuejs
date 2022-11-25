@@ -19,6 +19,7 @@
     "@logustra/vountdown": "^0.1.10",
     "bootstrap": "^5.2.3",
     "font-awesome": "^4.7.0",
+    "uuid": "^9.0.0",
     "vue": "^3.2.41",
     "vue3-flip-countdown": "^0.1.6"
   },
