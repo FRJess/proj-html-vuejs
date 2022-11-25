@@ -1,5 +1,6 @@
 <script>
 import TheHeader from './components/TheHeader.vue'
+import TheJumbotron from './components/TheJumbotron.vue'
 import AppMain from './components/AppMain.vue'
 import TheFooter from './components/TheFooter.vue'
 
@@ -9,6 +10,7 @@ export default {
 
   components:{
     TheHeader,
+    TheJumbotron,
     AppMain,
     TheFooter,
   }
@@ -19,6 +21,7 @@ export default {
 <template>
 
   <TheHeader/>
+  <TheJumbotron/> 
   <AppMain/>
   <TheFooter/>
   
