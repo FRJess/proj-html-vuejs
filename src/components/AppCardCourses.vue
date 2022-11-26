@@ -49,8 +49,7 @@ export default {
 @use '../styles/general.scss' as *;
 
 .card-group{
-  // margin-bottom: 5px;
-  // min-width: 200px;
+  min-width: 200px;
 }
 .jt-card{
     text-align: center;
