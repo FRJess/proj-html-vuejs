@@ -32,9 +32,9 @@ export default {
           </div>
           <div class="card-footer jt-card-footer border-0">
             <ul>
-              <li>{{card.level}}</li>
-              <li>{{card.material}}</li>
-              <li>{{card.duration}}</li>
+              <li><i class="fa-sharp fa-solid fa-signal"></i>{{card.level}}</li>
+              <li><i class="fa-sharp fa-solid fa-list"></i>{{card.material}}</li>
+              <li><i class="fa-regular fa-clock"></i>{{card.duration}}</li>
               </ul>
           </div>
         </div>
@@ -53,13 +53,13 @@ export default {
 
 .card-group{
   // margin-bottom: 5px;
+  // min-width: 200px;
 }
 .jt-card{
     text-align: center;
     cursor: pointer;
     margin: 10px 0px;
     padding: 0px;
-    // min-width: 600px;
   img{
     max-width: 100%;
     transition: all .2s;
@@ -91,7 +91,7 @@ export default {
       position: absolute;
       margin: 0 auto;
       background-color: lighten($light-elements, 20%) ;
-      width: 90%;
+      width: 95%;
       height: 1px;
       top: 0;
       left: 0;
@@ -105,9 +105,16 @@ export default {
       @include positionFlex('between');
       @include listStyle;
       text-align: center;
-      padding: 10px;
+      padding: 15px 10px;
       li{
-        font-size: 0.8rem;
+        @include centerFlex('vertical');
+        font-family: $text-font;
+        color: $light-elements;
+        font-size: 0.6rem;
+        i{
+          color: $primary-color;
+          padding-right: 3px;
+        }
       }
     }
   }

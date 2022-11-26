@@ -24,7 +24,7 @@ export default {
 
     <div  class="cards-courses">
       <h3>New Courses</h3>
-      <div class="row row-cols-3 g-4">
+      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
   
           
           <AppCardCourses
