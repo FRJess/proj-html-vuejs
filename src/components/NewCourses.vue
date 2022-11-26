@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <div class="new-courses-container py-4">
+  <div class="new-courses-container">
 
     <div  class="cards-courses">
       <h3>New Courses</h3>
@@ -34,9 +34,9 @@ export default {
        
       </div>
         
+      <button type="button" class="jt-btn btn btn-warning rounded-pill">load more</button>
     </div>
       
-    <button type="button" class="jt-btn btn btn-warning rounded-pill">load more</button>
   </div>
 
   
@@ -51,12 +51,7 @@ export default {
 
 .new-courses-container{
   background-color: #EDF2F5;
-  .jt-btn{
-    text-transform: uppercase;
-    background-color: $primary-color;
-    color: white
-  
-  }
+  padding: 60px 0;
 }
 .cards-courses{
   max-width: 60%;
@@ -66,9 +61,19 @@ export default {
     font-size: 3rem;
   }
   .row{
-    @include centerFlex('horizontal');
-    flex-wrap: wrap;
-    @include positionFlex('between');
+    margin: 10px auto;
+  }
+  .jt-btn{
+    // @include centerFlex('horizontal');
+    text-transform: uppercase;
+    background-color: $primary-color;
+    color: white;
+    margin-top: 30px;
+    &:hover{
+      filter: brightness(0.8);
+      color: white
+    }
+  
   }
 }
 
