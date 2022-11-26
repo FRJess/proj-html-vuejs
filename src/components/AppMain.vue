@@ -1,20 +1,21 @@
 <script>
-import NewCourses from './NewCourses.vue'
+import NewCourses from './NewCourses.vue';
+import Book from './Book.vue';
 
-export default {
-  name:'AppMain',
+  export default {
+    name:'AppMain',
 
-  components:{
-    NewCourses
-  
+    components:{
+      NewCourses,
+      Book
+    }
   }
 
-
-}
 </script>
 
 <template>
   <NewCourses/>
+  <Book/>
 
   
 </template>
