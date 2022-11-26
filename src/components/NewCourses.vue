@@ -20,21 +20,24 @@ export default {
 </script>
 
 <template>
+  <div  class="cards-courses">
+    <h3>New Courses</h3>
+    <div class="row row-cols-3 g-4">
 
-<div  class="cards-courses">
-  <h3>New Courses</h3>
+        
+        <AppCardCourses
+        v-for="(card, index) in courses"
+        :card="card"
+        :key="index"/>
+    
+    
+        
+      </div>
+      
+    </div>
+    
+    <button>load more</button>
 
-
-  <!-- card con js -->
-  <AppCardCourses
-  v-for="(card, index) in courses"
-  :card="card"
-  :key="index"/>
-
-
-  <button>load more</button>
-
-</div>
   
 </template>
 
@@ -51,6 +54,11 @@ export default {
   text-align: center;
   h3{
     font-size: 3rem;
+  }
+  .row{
+    @include centerFlex('horizontal');
+    flex-wrap: wrap;
+    @include positionFlex('between');
   }
 }
 
