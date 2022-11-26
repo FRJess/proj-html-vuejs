@@ -10,13 +10,15 @@ export default {
   <div class="container-book">
     <img src="../assets/img/slider_1-1917x607-1914x606.jpg" class="image-background" alt="library">
     <img src="../assets/img/book.png" class="image-book" alt="book">
-    <!-- <img src="../assets/img/amazon.png" class="image-button" alt="amazon button"> -->
+    <div class="book-text">
+      <h2>Get My Exclusive Investing Book just for $19.50</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, aspernatur.</p>
+      <div class="button-amazon">
+        <img src="../assets/img/amazon.png" alt="amazon button">
+      </div>
+    </div>
 
   </div>
-
-  <!-- con background library -->
-  <h2>exclu</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, aspernatur.</p>
   
 </template>
 
@@ -27,11 +29,13 @@ export default {
 @use '../styles/general.scss' as *;
 
 .container-book{
+  font-family: $text-font;
   position: relative;
   max-height: 600px;
-  // width: 100%;
+  // min-width: 100%;
   top: 0;
   left: 0;
+  overflow: hidden;
   .image-background{
     position: relative;
     top: 0;
@@ -43,7 +47,28 @@ export default {
     height: 90%;
     position: absolute;
     bottom: 0%;
-    right: 270px;
+    right: 20%;
+  }
+  .book-text{
+    position: absolute;
+    max-width: 40%;
+    top: 20%;
+    left: 20%;
+    text-align: center;
+    h2{
+      font-weight: 800;
+      color: $primary-color;
+    }
+    p{
+      color: white;
+      font-family: $italic-font;
+      font-style: italic;
+    }
+    .button-amazon{
+      img{
+        max-width: 150px;
+      }
+    }
   }
 }
 

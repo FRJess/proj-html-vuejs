@@ -95,6 +95,7 @@ export default {
       width: 100%;
     }
     .text-jumbotron{
+      margin-top: 20px;
       position: absolute;
       top: 30%;
       left: 70%;
