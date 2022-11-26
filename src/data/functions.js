@@ -3,3 +3,7 @@ const getPathImage = (imageName) => {
 }
 
 export { getPathImage }
+
+// const getFontAwesome = (iconName) => {
+//   return new URL(``)
+// }
