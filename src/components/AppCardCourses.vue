@@ -38,10 +38,7 @@ export default {
               </ul>
           </div>
         </div>
-
       </div>
-
-      
     </div>
 </template>
 
