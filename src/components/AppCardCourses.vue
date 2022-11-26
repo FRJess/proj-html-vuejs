@@ -21,11 +21,11 @@ export default {
       <!-- card con js -->
     <div class="jt-col">
       <div class="card-group h-100">
-        <div class="jt-card card h-100 mt-2">
+        <div class="jt-card card h-100 mt-2 rounded-0">
           <img 
           :src="getPathImage(card.image)" 
           :alt="card.image"
-          class="card-img-top">
+          class="card-img-top rounded-0">
           <div class="card-body">
             <h4 class="card-title">{{card.name}}</h4>
             <p class="card-text">{{card.type}}</p>

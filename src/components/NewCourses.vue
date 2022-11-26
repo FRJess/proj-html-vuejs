@@ -20,23 +20,24 @@ export default {
 </script>
 
 <template>
-  <div  class="cards-courses">
-    <h3>New Courses</h3>
-    <div class="row row-cols-3 g-4">
+  <div class="new-courses-container py-4">
 
-        
-        <AppCardCourses
-        v-for="(card, index) in courses"
-        :card="card"
-        :key="index"/>
-    
-    
+    <div  class="cards-courses">
+      <h3>New Courses</h3>
+      <div class="row row-cols-3 g-4">
+  
+          
+          <AppCardCourses
+          v-for="(card, index) in courses"
+          :card="card"
+          :key="index"/>
+       
+        </div>
         
       </div>
       
-    </div>
-    
-    <button>load more</button>
+      <button>load more</button>
+  </div>
 
   
 </template>
@@ -48,6 +49,9 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
 
+.new-courses-container{
+  background-color: #EDF2F5;
+}
 .cards-courses{
   max-width: 60%;
   margin: 0 auto;
