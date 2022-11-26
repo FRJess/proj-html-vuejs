@@ -25,12 +25,12 @@ export default {
           <img 
           :src="getPathImage(card.image)" 
           :alt="card.image"
-          class="card-img-top rounded-0">
+          class="card-img-top rounded-0 p-0">
           <div class="card-body">
             <h4 class="card-title">{{card.name}}</h4>
-            <p class="card-text">{{card.type}}</p>
+            <p class="card-type">{{card.type}}</p>
           </div>
-          <div class="card-footer jt-card-footer">
+          <div class="card-footer jt-card-footer border-0">
             <ul>
               <li>{{card.level}}</li>
               <li>{{card.material}}</li>
@@ -68,10 +68,38 @@ export default {
       filter: brightness(0.5);
     }
   }
+  .card-body{
+    padding: 0px;
+    .card-title{
+      font-size: 1rem;
+    }
+    .card-type{
+      font-size: 0.7rem;
+      font-family: $text-font;
+      color: $light-elements;
+      margin-bottom: 0px;
+    }
+
+  }
   .jt-card-footer{
     background-color: white;
     padding: 0;
+    position: relative;
+    &::before{
+      content: '';
+      // display: block;
+      position: absolute;
+      margin: 0 auto;
+      background-color: lighten($light-elements, 20%) ;
+      width: 90%;
+      height: 1px;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
     // display: flex;
+    border-top: 1px solid black;
+    
     ul{
       @include centerFlex('horizontal');
       @include positionFlex('between');
