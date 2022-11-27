@@ -1,16 +1,11 @@
 <script>
-import reasons from '../data/reasons';
+import reasons from '../../data/reasons';
 
 export default {
   name:'AppCardGoals',
   props:{
     card: Object,
   },
-  // data(){
-  //   return {
-
-  //   }
-  // }
 
 }
 </script>
@@ -37,9 +32,9 @@ export default {
 
 
 <style lang="scss" scoped>
-@use '../styles/partials/mixins' as *;
-@use '../styles/partials/variables' as *;
-@use '../styles/general.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/general.scss' as *;
 
 
 .card-group{

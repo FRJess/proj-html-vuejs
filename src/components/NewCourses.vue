@@ -1,5 +1,5 @@
 <script>
-import AppCardCourses from './AppCardCourses.vue';
+import AppCardCourses from './partials/AppCardCourses.vue';
 import courses from '../data/courses';
 
 export default {

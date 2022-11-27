@@ -1,7 +1,7 @@
 <script>
-import courses from '../data/courses';
+import courses from '../../data/courses';
 
-import { getPathImage } from '../data/functions';
+import { getPathImage } from '../../data/functions';
 
 export default {
   name:'AppCardCourses',
@@ -44,9 +44,9 @@ export default {
 
 
 <style lang="scss" scoped>
-@use '../styles/partials/mixins' as *;
-@use '../styles/partials/variables' as *;
-@use '../styles/general.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/general.scss' as *;
 
 .card-group{
   min-width: 200px;

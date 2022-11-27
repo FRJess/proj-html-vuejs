@@ -1,5 +1,5 @@
 <script>
-import AppCardGoals from './AppCardGoals.vue';
+import AppCardGoals from './partials/AppCardGoals.vue';
 import reasons from '../data/reasons';
 
 export default {
