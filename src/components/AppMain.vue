@@ -2,6 +2,7 @@
 import NewCourses from './NewCourses.vue';
 import Book from './Book.vue';
 import WhyCourses from './WhyCourses.vue';
+import AppFeedback from './AppFeedback.vue';
 
   export default {
     name:'AppMain',
@@ -9,7 +10,8 @@ import WhyCourses from './WhyCourses.vue';
     components:{
       NewCourses,
       Book,
-      WhyCourses
+      WhyCourses,
+      AppFeedback
     }
   }
 
@@ -19,6 +21,7 @@ import WhyCourses from './WhyCourses.vue';
   <NewCourses/>
   <Book/>
   <WhyCourses/>
+  <AppFeedback/>
 
   
 </template>

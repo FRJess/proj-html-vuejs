@@ -65,8 +65,8 @@ export default {
       font-style: italic;
     }
     .button-amazon{
-      cursor: pointer;
       img{
+        cursor: pointer;
         max-width: 150px;
       }
     }

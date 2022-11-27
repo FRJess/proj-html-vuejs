@@ -64,7 +64,6 @@ export default {
     margin: 10px auto;
   }
   .jt-btn{
-    // @include centerFlex('horizontal');
     text-transform: uppercase;
     background-color: $primary-color;
     color: white;
