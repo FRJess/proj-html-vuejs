@@ -61,14 +61,15 @@ export default {
 @use '../styles/general.scss' as *;
 
 .container-feedback{
-  // position: relative;
+  position: relative;
+  width: 100%;
   max-height: 400px;
   .image-background{
     
     object-fit: cover;
     object-position: 0 0%;
-    width: 100%;
-    height: 300px;
+    min-width: 100%;
+    max-height: 400px;
     position: relative;
     top: 0;
     left: 0;
