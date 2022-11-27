@@ -24,7 +24,7 @@ export default {
 
     <div  class="cards-reasons">
       <h3>Why my Courses?</h3>
-      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-2 g-4">
+      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-2 g-3">
   
           
         <AppCardGoals
