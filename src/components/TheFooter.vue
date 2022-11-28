@@ -1,6 +1,15 @@
 <script>
+import menufooter from '../data/menufooter';
+
+
 export default {
-  name:'TheFooter'
+  name:'TheFooter',
+
+  data(){
+    return {
+      menufooter
+    }
+  }
 
 }
 </script>
