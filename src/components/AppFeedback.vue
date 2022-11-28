@@ -38,10 +38,10 @@ export default {
   </section>
 
 
-  <!-- <section class="bottom">
+  <section class="bottom">
     <h2>student</h2>
 
-    slider
+    <!-- slider -->
     <div>
       <img src="" alt="">
       <h4>titolo</h4>
@@ -50,7 +50,7 @@ export default {
       
     </div>
 
-  </section> -->
+  </section>
   
 </template>
 
@@ -65,7 +65,6 @@ export default {
   width: 100%;
   max-height: 400px;
   .image-background{
-    
     object-fit: cover;
     object-position: 0 0%;
     min-width: 100%;
@@ -75,7 +74,8 @@ export default {
     left: 0;
   }
   .feedback-datas{
-    width: 60%;
+    width: 80%;
+    flex-wrap: wrap;
     margin: 0 auto;
     position: absolute;
     top: 50%;
