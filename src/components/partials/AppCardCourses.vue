@@ -26,6 +26,7 @@ export default {
           :src="getPathImage(card.image)" 
           :alt="card.image"
           class="card-img-top rounded-0 p-0">
+          <div class="price">{{card.price}}</div>
           <div class="card-body">
             <h4 class="card-title">{{card.name}}</h4>
             <p class="card-type">{{card.type}}</p>
@@ -33,7 +34,7 @@ export default {
             v-if="card.special === true"
             class="jt-badge badge">
             Special
-          </span>
+            </span>
           </div>
           <div class="card-footer jt-card-footer border-0">
             <ul>
@@ -79,7 +80,23 @@ export default {
     border-radius: 3px;
     background-color: $primary-color;
             
-          }
+  }
+  .price {
+    text-align: center;
+    position: absolute;
+    color: white;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    opacity: 0;
+    transition: 0.6s all;
+    // text-transform: $text-upper;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  &:hover .price {
+    opacity: 1;
+  }
   .card-body{
     padding: 0px;
     .card-title{
