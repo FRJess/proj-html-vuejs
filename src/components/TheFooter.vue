@@ -15,9 +15,9 @@ export default {
 
 <template>
   <div class="footer-container">
-    <div class="footer-menu">
+    <div class="footer-menu row">
 
-      <div class="col-3 jt-col about">
+      <div class="col-lg-3 col-md-6 col-sm-12 jt-col about">
         <h4>About</h4>
         <div>Masterstudy is Education WordPress theme featured by Learning Management System (LMS) for online education.</div>
         <div>Developed by Stylemix Themes</div>
@@ -30,7 +30,7 @@ export default {
         
       </div>
       
-      <div class="col-3 jt-col contacts">
+      <div class="col-lg-3 col-md-6 col-sm-12 jt-col contacts">
         <h4>Contact</h4>
         <ul>
           <li>USA, California 20 First Avenue, California</li>
@@ -40,7 +40,7 @@ export default {
         </ul>
       </div>
       
-      <div class="col-3 jt-col pages">
+      <div class="col-lg-3 col-md-6 col-sm-12 jt-col pages">
         <h4>Pages</h4>
         <ul>
           <li
@@ -52,7 +52,7 @@ export default {
         </ul>
       </div>
       
-      <div class="col-3 jt-col blog">
+      <div class="col-lg-3 col-md-6 col-sm-12 jt-col blog">
         <h4>Blog</h4>
         <div class="blog-post">
           <img src="../assets/img/photo-1517520287167-4bbf64a00d66-50x50.jpeg" alt="">
@@ -89,7 +89,7 @@ export default {
 @use '../styles/general.scss' as *;
 
 .footer-container{
-  height: 500px;
+  // height: 500px;
   width: 100%;
   background-color: $primary-color;
   padding: 50px;

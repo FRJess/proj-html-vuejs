@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <div class="jt-col">
+  <div class="jt-col col-sm-12 col-md-3 col-lg-3">
     <div class="card-group h-100">
       <div class="jt-card">
 

@@ -86,7 +86,7 @@ export default {
   padding-top: 50px;
   text-align: center;
   h2{
-    padding: 20px;
+    padding: 10px;
   }
 }
 
