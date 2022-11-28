@@ -39,7 +39,7 @@ export default {
   </section>
 
 
-  <section class="bottom">
+  <section class="bottom-feedback">
     <h2>What Students Say</h2>
 
     <!-- slider -->
@@ -79,6 +79,14 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     @include positionFlex('between')
+  }
+}
+
+.bottom-feedback{
+  padding-top: 50px;
+  text-align: center;
+  h2{
+    padding: 20px;
   }
 }
 

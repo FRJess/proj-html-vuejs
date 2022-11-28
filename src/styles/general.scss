@@ -17,3 +17,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: $light-elements;
+  font-size: 10px;
+}

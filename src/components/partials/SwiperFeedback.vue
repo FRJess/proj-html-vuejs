@@ -1,6 +1,6 @@
 <script>
 import {Navigation} from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import  { Swiper, SwiperSlide } from 'swiper/vue';
 import students from '../../data/studentsays';
 import StarRating from 'vue-star-rating';
 import { getPathImage } from '../../data/functions';
@@ -28,7 +28,21 @@ export default {
     return{
       students
     }
+  },
+
+  methods:{
+    getSwiper(){
+      new Swiper('.swiper', {
+    // configure Swiper to use modules
+    modules: [Navigation],
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+    })
   }
+}
 }
 </script>
 
@@ -40,9 +54,11 @@ export default {
     :card="card"
     :key="index" >
 
-      <img :src="getPathImage(card.image)" alt="">
-      <h6>{{card.title}}</h6>
-      <div class="rating-stars">
+      <div class="jt-slider">
+        
+        <img :src="getPathImage(card.image)" alt="">
+        <h6>{{card.title}}</h6>
+
           <star-rating 
           :rating="5"
           :star-size="10"
@@ -51,10 +67,13 @@ export default {
           :active-color="['#f2b71d']"
           :show-rating="false"
           :round-start-rating= "true"
-          inactive-color="white">
+          inactive-color="white"
+          class="rating-stars">
           </star-rating>
-        </div>
+
         <p>{{card.text}}</p>
+
+      </div>
         
 
     </swiper-slide>
@@ -70,8 +89,9 @@ export default {
 @use '../../styles/general.scss' as *;
 
 .swiper {
-  width: 100%;
+  width: 60%;
   height: 100%;
+
 }
 
 swiper-slide {
@@ -95,14 +115,31 @@ swiper-slide {
 }
 
 .swiper-slide img {
-  display: block;
+
   width: 50px;
   border-radius: 50%;
   object-fit: cover;
-  &:active{
-    width: 80px;
-  }
+  padding-bottom: 5px;
 }
 
-
+.jt-slider{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    h6{
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      margin: 0;
+    }
+    .rating-stars{
+      @include centerFlex('horizontal');
+      padding-bottom: 15px;
+    }
+    p{
+      font-family: $text-font;
+      font-size: 0.8rem;
+      color: $light-elements;
+    }
+  }
+  
 </style>
