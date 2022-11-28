@@ -2,7 +2,6 @@
 import FeedbackDatas from './partials/FeedbackDatas.vue';
 import feedback from '../data/feedback';
 import SwiperFeedback from './partials/SwiperFeedback.vue';
-import studentsays from '../data/studentsays';
 
 export default {
   name:'AppFeedback',
@@ -15,7 +14,6 @@ export default {
   data(){
     return{
       feedback,
-      studentsays,
     }
   }
 
@@ -34,7 +32,6 @@ export default {
         v-for="(card, index) in feedback"
         :card="card"
         :key="index"/>
-      <!-- FA con numero + titolo -->
     </div>
 
   </div>
@@ -47,10 +44,7 @@ export default {
 
     <!-- slider -->
     <div>
-      <SwiperFeedback
-      v-for="(card, index) in studentsays"
-      :card="card"
-      :key="index" />
+      <SwiperFeedback/>
     </div>
 
   </section>
