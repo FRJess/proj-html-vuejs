@@ -128,6 +128,7 @@ export default {
     }
     .content{
       width: 100%;
+      @include centerFlex('vertical');
       .left-part{
         padding-left: 0;
         padding-right: 0;
@@ -163,10 +164,12 @@ export default {
         .numbers{
           @include positionFlex('between');
           color: white;
-          font-size: 3rem;
+          font-size: 6rem;
+          line-height: 6rem;
           span{
             font-size: 2rem;
             color: black;
+            line-height: 2rem;
           }
           .col{
             @include flexDirection('column');
