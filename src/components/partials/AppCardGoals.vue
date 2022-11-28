@@ -18,7 +18,7 @@ export default {
       <div class="card-group h-100">
         <div class="jt-card card rounded-0 border-top-0 border-bottom-0 border-end-0">
           <div class="icon">
-            <font-awesome-icon :class="card.icon"></font-awesome-icon>
+            <i :class="card.icon"></i>
           </div>
           <div class="card-body">
             <h4 class="card-title">{{card.name}}</h4>

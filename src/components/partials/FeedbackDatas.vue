@@ -16,7 +16,7 @@ export default {
       <div class="jt-card">
 
         <div class="icon">
-          <font-awesome-icon :class="card.icon"></font-awesome-icon>
+          <i :class="card.icon"></i>
         </div>
 
         <div class="card-body">
@@ -47,7 +47,7 @@ export default {
     float: left;
     display: inline;
     min-width: 25%;
-    font-awesome-icon{
+    i{
       font-size: 2.2rem;
     }
   }

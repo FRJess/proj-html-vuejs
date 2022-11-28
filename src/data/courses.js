@@ -1,6 +1,5 @@
 export default [
   {
-    id: 1000,
     name: 'How to be a DJ? Make Electronic Music',
     type: 'Electronic',
     level: 'Advanced',
@@ -11,7 +10,6 @@ export default [
     price: '$59',
   },
   {
-    id: 1001,
     name: 'Nvidia and UE4 RTechnologies Practice',
     type: 'Nvidia',
     level: 'Advanced',
@@ -22,7 +20,6 @@ export default [
     price: '$79',
   },
   {
-    id: 1002,
     name: 'Fashion Photography from professional',
     type: 'Fashion',
     level: 'Advanced',
@@ -33,7 +30,6 @@ export default [
     price: '$59',
   },
   {
-    id: 1003,
     name: 'Design Instruments for Communication',
     type: 'Communication',
     level: 'Intermediate',
@@ -44,7 +40,6 @@ export default [
     price: '$39',
   },
   {
-    id: 1004,
     name: 'Make your Concept Right and Beautiful',
     type: 'Art',
     level: 'Intermediate',
@@ -55,7 +50,6 @@ export default [
     price: '$49',
   },
   {
-    id: 1005,
     name: 'Road Bike Manual or How to Be a Champion',
     type: 'Bicycle',
     level: 'Beginner',

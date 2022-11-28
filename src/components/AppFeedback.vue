@@ -1,17 +1,21 @@
 <script>
 import FeedbackDatas from './partials/FeedbackDatas.vue';
 import feedback from '../data/feedback';
+import SwiperFeedback from './partials/SwiperFeedback.vue';
+import studentsays from '../data/studentsays';
 
 export default {
   name:'AppFeedback',
 
   components:{
-    FeedbackDatas
+    FeedbackDatas,
+    SwiperFeedback,
   },
 
   data(){
     return{
-      feedback
+      feedback,
+      studentsays,
     }
   }
 
@@ -39,15 +43,14 @@ export default {
 
 
   <section class="bottom">
-    <h2>student</h2>
+    <h2>What Students Say</h2>
 
     <!-- slider -->
     <div>
-      <img src="" alt="">
-      <h4>titolo</h4>
-      <div>stelle</div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, fugit. Dolorem unde dicta assumenda facere enim odio cumque impedit hic.</p>
-      
+      <SwiperFeedback
+      v-for="(card, index) in studentsays"
+      :card="card"
+      :key="index" />
     </div>
 
   </section>
