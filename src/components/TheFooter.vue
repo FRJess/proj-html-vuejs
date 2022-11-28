@@ -40,7 +40,7 @@ export default {
         </ul>
       </div>
       
-      <div class="col-3 jt-col">
+      <div class="col-3 jt-col pages">
         <h4>Pages</h4>
         <ul>
           <li
@@ -52,16 +52,26 @@ export default {
         </ul>
       </div>
       
-      <div class="col-3 jt-col">
+      <div class="col-3 jt-col blog">
         <h4>Blog</h4>
-    
-        <img src="../assets/img/photo-1490376840453-5f616fbebe5b-50x50.jpeg" alt="">
-        <h6>Our main target is to "Developing Yourself as a Leader"</h6>
-        <p>- August 9, 2018</p>
-    
-        <img src="../assets/img/photo-1517520287167-4bbf64a00d66-50x50.jpeg" alt="">
-        <h6>Our main target is to "Developing Yourself as a Leader"</h6>
-        <p>- August 9, 2018</p>
+        <div class="blog-post">
+          <img src="../assets/img/photo-1517520287167-4bbf64a00d66-50x50.jpeg" alt="">
+          <div class="text">
+            <h6>Our main target is to "Developing Yourself as a Leader"</h6>
+            <p>- August 9, 2018</p>
+
+          </div>
+        </div>
+        
+        <div class="blog-post">
+          <img src="../assets/img/photo-1490376840453-5f616fbebe5b-50x50.jpeg" alt="">
+          <div class="text">
+            <h6>Our main target is to "Developing Yourself as a Leader"</h6>
+            <p>- August 9, 2018</p>
+
+          </div>
+
+        </div>
     
       </div>
     </div>
@@ -83,28 +93,64 @@ export default {
   width: 100%;
   background-color: $primary-color;
   padding: 50px;
+  margin-top: 60px;
+
   .footer-menu{
     width: auto;
     max-width: 1200px;
     font-family: $text-font;
     text-align: left;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 60px 0 0;
     @include positionFlex ('between');
+
     .jt-col{
       padding: 0 15px 15px;
     }
+
     .social-menu a{
       display: inline-block;
       vertical-align: top;
       margin: 15px 15px 0 0;
     }
+
     .contacts ul li:first-child{
       margin-bottom: 10px;
     }
     .contacts ul li:last-child{
       margin-top: 10px;
     }
+
+    .pages ul{
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      list-style-type: square;
+      li{
+        margin-bottom: 10px;
+
+      }
+    }
+
+    .blog-post{
+      img{
+        width: 75px;
+        contain: content;
+        float: left;
+        padding: 0;
+        margin-right: 15px;
+      }
+      h6{
+        font-family: $main-font;
+        font-size: 1.4rem;
+      }
+      p{
+        font-size: 0.8rem;
+        color: darken($light-elements, 20%) ;
+        margin-left: 85px
+      }
+    }
+
     ul{
       @include listStyle();
       margin: 0;
@@ -118,13 +164,15 @@ export default {
     }
 
   }
+
+  h4{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: $main-font;
+    margin-bottom: 2rem;
+  }
   
 }
 
-h4{
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-family: $main-font;
-}
 
 </style>
