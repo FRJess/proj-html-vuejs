@@ -29,6 +29,11 @@ export default {
           <div class="card-body">
             <h4 class="card-title">{{card.name}}</h4>
             <p class="card-type">{{card.type}}</p>
+            <span 
+            v-if="card.special === true"
+            class="jt-badge badge">
+            Special
+          </span>
           </div>
           <div class="card-footer jt-card-footer border-0">
             <ul>
@@ -64,6 +69,17 @@ export default {
       filter: brightness(0.5);
     }
   }
+  .jt-badge{
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    padding: 4px 6px;
+    border-radius: 3px;
+    background-color: $primary-color;
+            
+          }
   .card-body{
     padding: 0px;
     .card-title{
