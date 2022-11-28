@@ -9,6 +9,7 @@ export default {
       menu
     }
   }
+
 }
 </script>
 
@@ -55,7 +56,7 @@ export default {
 @use '../styles/general.scss' as *;
 
 .jt-container{
-  height:250px;
+  height: 150px;
   width: 70%;
   margin: 0 auto;
   font-family: $main-font;
