@@ -61,7 +61,6 @@ export default {
   width: 70%;
   margin: 0 auto;
   font-family: $main-font;
-  // font-weight: 500;
   font-size: 20px;
   @include centerFlex ('vertical');
   @include positionFlex ('between');
@@ -83,11 +82,25 @@ export default {
         a{
           @include links();
           &.active{
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-decoration: underline;
             text-decoration-color: $primary-color;
             text-decoration-thickness: 4px;
-            text-underline-offset: 20px;
+            text-underline-offset: 10px;
+            &::after{
+              content: '';
+              display: block;
+              position: absolute;
+              width: 0;
+              height: 0;
+              top: 24px;
+              left: 50%;
+              margin-left: -3px;
+              border-style: solid;
+              border-width: 0 3px 3px;
+              border-color: transparent transparent $primary-color;
+
+            }
             // color: $primary-color;
           // box-shadow: inset 0 -2px 0 $primary-color;
           }
