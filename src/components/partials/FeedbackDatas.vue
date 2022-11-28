@@ -46,17 +46,16 @@ export default {
   .icon{
     float: left;
     display: inline;
-    width: 20%;
+    min-width: 25%;
     font-awesome-icon{
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
   }
-  
   .card-body{
     float: left;
     display: inline;
     max-height: 100px;
-    width: 80%;
+    min-width: 75%;
     padding: 10px;
     text-align: left;
     .card-data{
