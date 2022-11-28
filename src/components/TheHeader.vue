@@ -101,8 +101,6 @@ export default {
               border-color: transparent transparent $primary-color;
 
             }
-            // color: $primary-color;
-          // box-shadow: inset 0 -2px 0 $primary-color;
           }
           .jt-badge{
             text-transform: uppercase;

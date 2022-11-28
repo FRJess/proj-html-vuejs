@@ -60,6 +60,9 @@ export default {
     width: 20%;
     height: 100%;
   }
+  &:hover .icon {
+    color: white;
+  }
   
   .card-body{
     float: left;
