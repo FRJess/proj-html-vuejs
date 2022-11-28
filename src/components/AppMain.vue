@@ -22,8 +22,6 @@ import AppFeedback from './AppFeedback.vue';
   <Book/>
   <WhyCourses/>
   <AppFeedback/>
-
-  
 </template>
 
 

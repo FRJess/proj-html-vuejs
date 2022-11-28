@@ -32,7 +32,6 @@ export default {
   font-family: $text-font;
   position: relative;
   max-height: 600px;
-  // min-width: 100%;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -72,6 +71,5 @@ export default {
     }
   }
 }
-
 
 </style>

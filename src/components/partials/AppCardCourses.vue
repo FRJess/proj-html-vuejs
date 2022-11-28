@@ -18,15 +18,18 @@ export default {
 
 <template>
 
-      <!-- card con js -->
+      <!-- imported courses.js-->
     <div class="jt-col">
       <div class="card-group h-100">
+
         <div class="jt-card card h-100 mt-2 rounded-0">
+          
           <img 
           :src="getPathImage(card.image)" 
           :alt="card.image"
           class="card-img-top rounded-0 p-0">
           <div class="price">{{card.price}}</div>
+
           <div class="card-body">
             <h4 class="card-title">{{card.name}}</h4>
             <p class="card-type">{{card.type}}</p>
@@ -36,6 +39,7 @@ export default {
             Special
             </span>
           </div>
+
           <div class="card-footer jt-card-footer border-0">
             <ul>
               <li><i class="fa-sharp fa-solid fa-signal"></i>{{card.level}}</li>
@@ -44,6 +48,7 @@ export default {
               </ul>
           </div>
         </div>
+
       </div>
     </div>
 </template>
@@ -90,7 +95,6 @@ export default {
     transform: translate(-50%, -20%);
     opacity: 0;
     transition: 0.6s all;
-    // text-transform: $text-upper;
     font-weight: 600;
     font-size: 2rem;
   }
@@ -114,9 +118,9 @@ export default {
     background-color: white;
     padding: 0;
     position: relative;
+    border-top: 1px solid black;
     &::before{
       content: '';
-      // display: block;
       position: absolute;
       margin: 0 auto;
       background-color: lighten($light-elements, 20%) ;
@@ -126,8 +130,6 @@ export default {
       left: 0;
       right: 0;
     }
-    // display: flex;
-    border-top: 1px solid black;
     
     ul{
       @include centerFlex('horizontal');

@@ -40,6 +40,7 @@ export default {
         </ul>
       </div>
       
+      <!-- imported footermenu.js -->
       <div class="col-lg-3 col-md-6 col-sm-12 jt-col pages">
         <h4>Pages</h4>
         <ul>
@@ -89,7 +90,6 @@ export default {
 @use '../styles/general.scss' as *;
 
 .footer-container{
-  // height: 500px;
   width: 100%;
   background-color: $primary-color;
   padding: 50px;
@@ -162,7 +162,6 @@ export default {
         color: white;
       }
     }
-
   }
 
   h4{
@@ -171,8 +170,6 @@ export default {
     font-family: $main-font;
     margin-bottom: 2rem;
   }
-  
 }
-
 
 </style>

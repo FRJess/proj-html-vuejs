@@ -12,19 +12,22 @@ export default {
 
 <template>
 
-  <!-- card con js -->
-
+  <!-- imported reasons.js-->
   <div class="jt-col">
       <div class="card-group h-100">
+
         <div class="jt-card card rounded-0 border-top-0 border-bottom-0 border-end-0">
           <div class="icon">
             <i :class="card.icon"></i>
           </div>
+
           <div class="card-body">
             <h4 class="card-title">{{card.name}}</h4>
             <p class="card-description">{{card.description}}</p>
           </div>
+
         </div>
+
       </div>
     </div>
   
@@ -84,6 +87,5 @@ export default {
     }
   }
 }
-
 
 </style>

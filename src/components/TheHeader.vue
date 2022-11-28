@@ -9,18 +9,17 @@ export default {
       menu
     }
   }
-
 }
 </script>
 
 <template>
   <header  class="jt-container">
-    
-      <!-- logo -->
-      <div class="logo col-auto">
-        <img src="../assets/img/MasterStudy-1.svg" alt="logo Master Study">
-      </div>
+          
+    <div class="logo col-auto">
+      <img src="../assets/img/MasterStudy-1.svg" alt="logo Master Study">
+    </div>
 
+    <!-- imported menu.js -->
     <div class="navigation col-auto">
       <ul>
           <li
@@ -32,7 +31,6 @@ export default {
             class="jt-badge badge">
             New
           </span></a>
-
           </li>
         </ul>
     </div>
@@ -81,6 +79,8 @@ export default {
         margin: 0 10px 0 10px;
         a{
           @include links();
+          
+          // line styled in active element
           &.active{
             margin-bottom: 8px;
             text-decoration: underline;
@@ -99,9 +99,9 @@ export default {
               border-style: solid;
               border-width: 0 3px 3px;
               border-color: transparent transparent $primary-color;
-
             }
           }
+
           .jt-badge{
             text-transform: uppercase;
             font-size: 0.8rem;
@@ -111,9 +111,7 @@ export default {
             padding: 4px 6px;
             border-radius: 3px;
             background-color: #DC1244;
-            
           }
-
         }
       }
     }
@@ -126,6 +124,5 @@ export default {
     }
   }
 }
-
 
 </style>

@@ -22,19 +22,19 @@ export default {
 
 <template>
 
-  <!-- backgroup top -->
   <section class="top-feedback">
     <div class="container-feedback">
-    <img src="../assets/img/counter-1919x1101.jpg" class="image-background" alt="alumni">
-  
-    <div class="feedback-datas">
-      <FeedbackDatas
-        v-for="(card, index) in feedback"
-        :card="card"
-        :key="index"/>
-    </div>
+      <img src="../assets/img/counter-1919x1101.jpg" class="image-background" alt="alumni">
+    
+      <!-- imported feedback.js-->  
+      <div class="feedback-datas">
+        <FeedbackDatas
+          v-for="(card, index) in feedback"
+          :card="card"
+          :key="index"/>
+      </div>
 
-  </div>
+    </div>
 
   </section>
 
@@ -42,7 +42,6 @@ export default {
   <section class="bottom-feedback">
     <h2>What Students Say</h2>
 
-    <!-- slider -->
     <div>
       <SwiperFeedback/>
     </div>

@@ -12,7 +12,6 @@ export default {
 
 <template>
 
-  <!-- top con background e overflow -->
   <section class="jumbotron-top jt-container container-fluid">
     <div class="jumbotron-top-backgound">
       <img src="../assets/img/slide-1.jpg" alt="">
@@ -25,6 +24,7 @@ export default {
 
     <div class="jumbotron-top-offer container">
       <div class="content row">
+
         <div class="left-part col-md-6 col-lg-6 col-sm-12">
           <h2><span class="white-text">Limited Sale: </span>All courses with 55% off</h2>
           <div class="mail-input input-group">
@@ -32,6 +32,8 @@ export default {
             <button type="button" class="btn rounded-pill subscribe end-0">Subscribe</button>
           </div>
         </div>
+
+        <!-- countdown component imported-->
         <div class="coutdown right-part col-md-6 col-lg-6 col-sm-12">
           <countdown
             tag="div"
@@ -52,24 +54,22 @@ export default {
               </div>
             </div>
           </countdown>
-  
         </div>
 
-      </div>
-        
+      </div>     
 
     </div>
-
   </section>
 
   <section class="jumbotron-bottom row">
-    <div class="left col-md-6 col-lg-6 col-sm-12">
+    <div class="director col-md-6 col-lg-6 col-sm-12">
       <h2>Hey there, my name is John Doe. I'm the founder of the Brain Academy.</h2>
       <img src="../assets/img/sign.jpg" alt="">
     </div>
 
     <div class="right col-md-6 col-lg-6 col-sm-12">
-      <div class="p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit repellat modi soluta excepturi ex officiis, nihil ab magni culpa voluptatibus, vitae quisquam optio distinctio recusandae veritatis adipisci sunt minima qui eius error commodi eveniet deleniti dolor. Autem ducimus cupiditate id. Ab fuga at repudiandae sed odit eius autem consequatur vitae quod molestiae totam nam explicabo aut, iure unde voluptatum, inventore qui aliquam! Nostrum perferendis numquam similique voluptates velit distinctio dolorum incidunt expedita officia fuga, magni veritatis necessitatibus repellendus, ipsam rerum quae aperiam porro quasi? Dicta, delectus incidunt in natus vel voluptates illo necessitatibus numquam recusandae maiores consequuntur soluta ea molestiae.</div>
+      <div class="presentation">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit repellat modi soluta excepturi ex officiis, nihil ab magni culpa voluptatibus, vitae quisquam optio distinctio recusandae veritatis adipisci sunt minima qui eius error commodi eveniet deleniti dolor. Autem ducimus cupiditate id. Ab fuga at repudiandae sed odit eius autem consequatur vitae quod molestiae totam nam explicabo aut, iure unde voluptatum, inventore qui aliquam! Nostrum perferendis numquam similique voluptates velit distinctio dolorum incidunt expedita officia fuga, magni veritatis necessitatibus repellendus, ipsam rerum quae aperiam porro quasi? Dicta, delectus incidunt in natus vel voluptates illo necessitatibus numquam recusandae maiores consequuntur soluta ea molestiae.
+      </div>
     </div>
   </section>
   
@@ -106,12 +106,12 @@ export default {
           color: $primary-color;
         }
       }
+      p{
+        font-size: 2rem;
+      }
     }
   }
-  .white-text{
-    color:white;
-  }
-
+  
   .jumbotron-top-offer{
     background-color: $primary-color;
     display: flex;
@@ -123,6 +123,9 @@ export default {
     bottom: -15%;
     transform: translateX(-50%);
     border-radius: 5px;
+    .white-text{
+      color:white;
+    }
     .content{
       width: 100%;
       .left-part{
@@ -131,7 +134,6 @@ export default {
   
         h2{
           font-size: 1.8rem;
-          // text-align: center;
         }
         .mail-input{
           width: 75%;
@@ -163,7 +165,7 @@ export default {
           color: white;
           font-size: 3rem;
           span{
-            font-size: 1rem;
+            font-size: 2rem;
             color: black;
           }
           .col{
@@ -179,7 +181,7 @@ export default {
   max-width: 70%;
   margin: 0 auto;
   @include positionFlex('between');
-  .left{
+  .director{
     font-family: $main-font;
     padding: 0 50px;
     h2{
@@ -191,7 +193,7 @@ export default {
       margin: 20px auto;
     }
   }
-  .right{
+  .presentation{
     font-family: $text-font;
     font-size: 0.8rem;
     color: #222222;

@@ -3,7 +3,6 @@ import TheHeader from './components/TheHeader.vue'
 import TheJumbotron from './components/TheJumbotron.vue'
 import AppMain from './components/AppMain.vue'
 import TheFooter from './components/TheFooter.vue'
-// import Prove from './components/Prove.vue'
 
 
 export default {
@@ -26,7 +25,6 @@ export default {
   <TheJumbotron/> 
   <AppMain/>
   <TheFooter/>
-  <!-- <Prove/> -->
   
 </template>
 

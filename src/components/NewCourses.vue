@@ -26,11 +26,12 @@ export default {
       <h3>New Courses</h3>
       <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
   
-          
+        <!-- imported courses.js-->  
         <AppCardCourses
         v-for="(card, index) in courses"
         :card="card"
-        :key="index"/>
+        :key="index"
+        />
        
       </div>
         
@@ -72,7 +73,6 @@ export default {
       filter: brightness(0.8);
       color: white
     }
-  
   }
 }
 

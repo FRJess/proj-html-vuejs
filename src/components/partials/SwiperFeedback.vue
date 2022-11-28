@@ -1,9 +1,9 @@
 <script>
 import {Navigation} from 'swiper';
 import  { Swiper, SwiperSlide } from 'swiper/vue';
-import students from '../../data/studentsays';
 import StarRating from 'vue-star-rating';
 import { getPathImage } from '../../data/functions';
+import students from '../../data/studentsays';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -32,14 +32,12 @@ export default {
 
   methods:{
     getSwiper(){
-      new Swiper('.swiper', {
-    // configure Swiper to use modules
-    modules: [Navigation],
-    navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
+    new Swiper('.swiper', {
+      modules: [Navigation],
+      navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      },
     })
   }
 }
@@ -47,8 +45,10 @@ export default {
 </script>
 
 <template>
+  <!-- swiper component imported-->
   <swiper :navigation="true" :modules="modules" class="mySwiper">
 
+    <!-- imported studentsays.js-->  
     <swiper-slide
     v-for="(card, index) in students"
     :card="card"
@@ -59,7 +59,8 @@ export default {
         <img :src="getPathImage(card.image)" alt="">
         <h6>{{card.title}}</h6>
 
-          <star-rating 
+        <!-- star-rating component imported-->
+        <star-rating 
           :rating="5"
           :star-size="10"
           :read-only="true"
@@ -69,13 +70,12 @@ export default {
           :round-start-rating= "true"
           inactive-color="white"
           class="rating-stars">
-          </star-rating>
+        </star-rating>
 
         <p>{{card.text}}</p>
 
       </div>
         
-
     </swiper-slide>
 
   </swiper>

@@ -11,8 +11,11 @@ export default {
 </script>
 
 <template>
+
   <div class="jt-col col-sm-12 col-md-3 col-lg-3">
     <div class="card-group h-100">
+
+      <!-- imported feedback.js -->
       <div class="jt-card">
 
         <div class="icon">
@@ -23,6 +26,7 @@ export default {
           <div class="card-data">{{card.data}}</div>
           <div class="card-name">{{card.name}}</div>
         </div>
+     
       </div>
     </div>
   </div>
